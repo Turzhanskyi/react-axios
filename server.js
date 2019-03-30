@@ -2,9 +2,11 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+
 const PORT = 4000;
 const cors = require('cors');
 const config = require('./DB');
+const ServerPortRouter = require('./routes/ServerPortRouter');
 
 mongoose.connect(config.DB).then(
     () => {console.log('Database is connected') },
